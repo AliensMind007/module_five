@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:module_five/pages/Lesson3/AppleShopUi.dart';
 import 'package:module_five/pages/Lesson3/Challange%20_Ui.dart';
 import 'package:module_five/pages/Lesson3/HomeWork.dart';
+import 'package:module_five/pages/Lesson4/Lesson4HomeWork.dart';
+import 'package:module_five/pages/Lesson4/IntroUi.dart';
 import 'package:module_five/pages/lesson2/LoginPage.dart';
 import 'package:module_five/pages/lesson2/SignUpPage.dart';
 import 'package:module_five/pages/lesson2/challange1.dart';
+import 'package:shake/shake.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,6 +18,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void initState() {
+    super.initState();
+    ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: () {
+
+      Navigator.pushNamed(context, IntroUi.id);
+      // Do stuff on phone shake
+    });
+    // To close: detector.stopListening();
+    // ShakeDetector.waitForStart() waits for user to call detector.startListening();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +97,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     color: Colors.black,
-                  ), Container(
+                  ),
+                  Container(
                     padding: const EdgeInsets.all(8),
                     child: MaterialButton(
                       onPressed: () {
@@ -96,20 +111,22 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     color: Colors.black,
-                  ),Container(
+                  ),
+                  Container(
                     padding: const EdgeInsets.all(8),
                     child: MaterialButton(
                       onPressed: () {
                         Navigator.pushNamed(context, ChallangeUi.id);
                       },
                       child: Text(
-                        "Lesson3 AppleShopUi",
+                        "Lesson3 Challange Ui",
                         style: TextStyle(
                             fontSize: 20, color: Colors.deepOrangeAccent),
                       ),
                     ),
                     color: Colors.black,
-                  ),Container(
+                  ),
+                  Container(
                     padding: const EdgeInsets.all(8),
                     child: MaterialButton(
                       onPressed: () {
@@ -117,6 +134,34 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text(
                         "Lesson3 HomeWork",
+                        style: TextStyle(
+                            fontSize: 20, color: Colors.deepOrangeAccent),
+                      ),
+                    ),
+                    color: Colors.black,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, IntroUi.id);
+                      },
+                      child: Text(
+                        "Lesson4 Intro Ui",
+                        style: TextStyle(
+                            fontSize: 20, color: Colors.deepOrangeAccent),
+                      ),
+                    ),
+                    color: Colors.black,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Lesson4HomeWork.id);
+                      },
+                      child: Text(
+                        "Lesson4 HomeWork",
                         style: TextStyle(
                             fontSize: 20, color: Colors.deepOrangeAccent),
                       ),

@@ -9,7 +9,10 @@ class HomeWork extends StatefulWidget {
 }
 
 class _HomeWorkState extends State<HomeWork> {
-  bool _ispressed = false;
+  bool _ispressed1 = false;
+  bool _ispressed2 = false;
+  bool _ispressed3 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,106 +61,128 @@ class _HomeWorkState extends State<HomeWork> {
                         fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(height: 15,),
-              Text("Lifestyle sale",style: TextStyle(fontSize: 35,color: Colors.white),),
-              Container(
-                width: 300,
-                height: 60,
-
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-
-                ),
-
-                child: MaterialButton(
-                  onPressed: () {}, child: Text("Shop now"),),
-
-              )
-            ],
-          ),
-        ),
-        GridView.count(
-
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          crossAxisCount: 1,
-          childAspectRatio: 1.0,
-          padding: const EdgeInsets.all(20.0),
-          mainAxisSpacing: 20.0,
-          crossAxisSpacing: 20.0,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.white,
-                image: DecorationImage(
-                  image: NetworkImage(
-                      "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2020/02/ipad-macbook.jpg"),
-                  fit: BoxFit.cover,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "Lifestyle sale",
+                      style: TextStyle(fontSize: 35, color: Colors.white),
+                    ),
+                    Container(
+                      width: 300,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: MaterialButton(
+                        onPressed: () {},
+                        child: Text("Shop now"),
+                      ),
+                    )
+                  ],
                 ),
               ),
-              child: Container(
-                padding: EdgeInsets.all(15),
-                alignment: Alignment.topRight,
-                child:IconButton(
-                  onPressed: (){
-                    setState(() {
-                      _ispressed = !_ispressed;
-                    });
-                  },
-                  icon: Icon((_ispressed == false) ? Icons.favorite_border : Icons.favorite,size: 40,color: Colors.redAccent,),
-
-                ),
-              ),),  Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.white,
-                image: DecorationImage(
-                  image: NetworkImage(
-                      "https://mlbtofxzvytu.i.optimole.com/vf0BlP4-lwEZVuwl/w:602/h:401/q:90/https://techrant.blog/wp-content/uploads/2018/12/apple-ecosystem.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Container(
-                padding: EdgeInsets.all(15),
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  onPressed: (){
-                    setState(() {
-                      _ispressed = !_ispressed;
-                    });
-                  },
-                  icon: Icon((_ispressed == false) ? Icons.favorite_border : Icons.favorite,size: 40,color: Colors.redAccent,),
-
-                ),
-              ),),  Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.white,
-                image: DecorationImage(
-                  image: NetworkImage(
-                      "https://cellassistenciatecnicabh.com.br/wp-content/uploads/2020/08/Problemas-mais-comuns-no-iPad-Apple.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Container(
-                padding: EdgeInsets.all(15),
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  onPressed: (){
-                    setState(() {
-                      _ispressed = !_ispressed;
-                    });
-                  },
-                  icon: Icon((_ispressed == false) ? Icons.favorite_border : Icons.favorite,size: 40,color: Colors.redAccent,),
-
-                ),
-              ),),]
-              ),
+              GridView.count(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisCount: 1,
+                  childAspectRatio: 1.0,
+                  padding: const EdgeInsets.all(20.0),
+                  mainAxisSpacing: 20.0,
+                  crossAxisSpacing: 20.0,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2020/02/ipad-macbook.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _ispressed1 = !_ispressed1;
+                            });
+                          },
+                          icon: Icon(
+                            (_ispressed1 == false)
+                                ? Icons.favorite_border
+                                : Icons.favorite,
+                            size: 40,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              "https://mlbtofxzvytu.i.optimole.com/vf0BlP4-lwEZVuwl/w:602/h:401/q:90/https://techrant.blog/wp-content/uploads/2018/12/apple-ecosystem.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _ispressed2 = !_ispressed2;
+                            });
+                          },
+                          icon: Icon(
+                            (_ispressed2 == false)
+                                ? Icons.favorite_border
+                                : Icons.favorite,
+                            size: 40,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              "https://cellassistenciatecnicabh.com.br/wp-content/uploads/2020/08/Problemas-mais-comuns-no-iPad-Apple.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _ispressed3 = !_ispressed3;
+                            });
+                          },
+                          icon: Icon(
+                            (_ispressed3 == false)
+                                ? Icons.favorite_border
+                                : Icons.favorite,
+                            size: 40,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ]),
             ],
           ),
         ),
